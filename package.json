@@ -1,0 +1,22 @@
+{
+  "name": "radbar",
+  "version": "1.0.0",
+  "description": "radbar means \"rad bar\", rad means \"great|good|terrific|fantastic|Extremely\", it's terminal progress indicator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newtorn/radbar.git"
+  },
+  "author": "Newtorn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/newtorn/radbar/issues"
+  },
+  "homepage": "https://github.com/newtorn/radbar#readme",
+  "dependencies": {
+    "string-width": "^4.1.0"
+  }
+}

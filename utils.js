@@ -1,6 +1,5 @@
 exports.time = {
     time: Date.now(),
-    sleep: (d) => { for(var t = Date.now();Date.now() - t <= d;); },
     format: (sec) => {
         sec = Math.max(sec, 0);
         let s = Math.floor(sec % 60).toFixed(0);

@@ -19,7 +19,5 @@
   "dependencies": {
     "string-width": "^4.1.0"
   },
-  "devDependencies": {
-    "sleep": "^6.1.0"
-  }
+  "devDependencies": {}
 }

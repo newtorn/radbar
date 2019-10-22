@@ -7,7 +7,7 @@ exports.time = {
         let m = Math.floor((sec / 60) % 60).toFixed(0);
         let h = Math.floor((sec / 3600) % 60).toFixed(0);
         let r = m.padStart(2, '0') + ':' + s.padStart(2, '0');
-        r = h ? h.padStart(2, '0') + ':' + r : r;
+        r = h > 0 ? h.padStart(2, '0') + ':' + r : r;
         return r;
     },
 }

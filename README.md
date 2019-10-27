@@ -22,7 +22,7 @@ for (let _ of radbar.ProgressBar.iterator(Array(2e4)));
 hello:  68.40%|█████████████░░░░░░░| 1368/2000 [00:02>00:01, 1000.07Bytes/s]
 ```
 
-|Screenshot|
+![quickstart](assets/quickstart.gif)
 
 ## API
 `::ProgressBar`
@@ -68,5 +68,3 @@ for (let _ of radbar.ProgressBar.iterator(Array(2e4)));
 
 ## LICENSE
 Code license with [MIT](LICENSE)
-
-.. |Screenshot| image:: https://raw.githubusercontent.com/newtorn/radbar/master/assets/quickstart.gif

@@ -12,6 +12,7 @@ Quickly start a smart progress in NodeJs with radbar
 
 ``radbar`` means ``rad bar``, rad means ``great|good|terrific|fantastic|Extremely``, it's terminal progress indicator.
 
+## QuickStart
 Just wrap any iterable with ``iterator(iterable)``, quickly show a tiny smart progress bar.
 
 ```js
@@ -23,6 +24,11 @@ hello:  68.40%|█████████████░░░░░░░| 136
 ```
 
 ![quickstart](assets/quickstart.gif)
+
+## Installation
+```shell
+npm install radbar
+```
 
 ## API
 `::ProgressBar`

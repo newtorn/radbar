@@ -12,6 +12,7 @@
 
 ``radbar`` 意思是 ``rad bar``, rad 意为 ``非常棒的、极好的、吸引人的``, 它是一个终端上的进度信号器。
 
+## 快速开始
 通过``iterator(iterable)``包装一个可迭代对象, 即可快速产生一个小的智能进度条。
 
 ```js
@@ -23,6 +24,11 @@ hello:  68.40%|█████████████░░░░░░░| 136
 ```
 
 ![quickstart](assets/quickstart.gif)
+
+## 安装
+```shell
+npm install radbar
+```
 
 ## 接口
 `::ProgressBar`

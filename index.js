@@ -1,4 +1,3 @@
-const { time } = require('./utils');
 const stringWidth = require('string-width');
 
 const MOVE_LEFT = Buffer.from('1b5b3130303044', 'hex').toString();
@@ -6,10 +5,28 @@ const MOVE_UP = Buffer.from('1b5b3141', 'hex').toString();
 const CLEAR_LINE = Buffer.from('1b5b304b', 'hex').toString();
 
 /**
+ * format time with serconds
+ * if time less than 60 minutes then format with 00:00
+ * else then format with 00:00:00
+ *
+ * @param {*} sec
+ * @returns
+ */
+function timeFormat(sec){
+    sec = Math.max(sec, 0);
+    let s = Math.floor(sec % 60).toFixed(0);
+    let m = Math.floor((sec / 60) % 60).toFixed(0);
+    let h = Math.floor((sec / 3600) % 60).toFixed(0);
+    let r = m.padStart(2, '0') + ':' + s.padStart(2, '0');
+    r = h > 0 ? h.padStart(2, '0') + ':' + r : r;
+    return r;
+}
+
+/**
  * Make stream to write on the same line
  * @param {NodeJs.WriteStream} stream 
  */
-function wrapstream(stream) {
+function wrapStream(stream) {
     let str;
     let write = stream.write;
     stream.write = function (data) {
@@ -67,7 +84,7 @@ class WriteOneLine {
         } else if (stream === 'stdout' || stream !== process.stdout || stream !== process.stderr) {
             stream = process.stdout;
         }
-        this._writerfunc = wrapstream(stream);
+        this._writerfunc = wrapStream(stream);
     }
     /**
      * 
@@ -153,8 +170,8 @@ exports.ProgressBar = class ProgressBar {
         let bar_right = '| ' + this._comp_num + '/';
         bar_right += this.visrest ? (this.total - this._comp_num) + '/' : '';
         bar_right += this.total + ' [';
-        bar_right += time.format(this._usetime) + '>';
-        bar_right += time.format(this._restime) + ', ';
+        bar_right += timeFormat(this._usetime) + '>';
+        bar_right += timeFormat(this._restime) + ', ';
         bar_right += this._preratio.toFixed(2) + this.unit + '/s]';
 
         let unbar_len = bar_left.length + bar_right.length;

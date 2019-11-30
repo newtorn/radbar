@@ -23,7 +23,7 @@ for (let _ of radbar.ProgressBar.iterator(Array(2e4)));
 hello:  68.40%|█████████████░░░░░░░| 1368/2000 [00:02>00:01, 1000.07Bytes/s]
 ```
 
-![quickstart](assets/quickstart.gif)
+![quickstart](../assets/quickstart.gif)
 
 ## 安装
 ```shell

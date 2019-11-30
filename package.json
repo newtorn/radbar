@@ -19,5 +19,16 @@
   "dependencies": {
     "string-width": "^4.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "directories": {
+    "doc": "doc"
+  },
+  "keywords": [
+    "bar",
+    "progress",
+    "indicator",
+    "cli-bar",
+    "loading",
+    "terminal"
+  ]
 }

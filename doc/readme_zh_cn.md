@@ -66,7 +66,6 @@ for (let written of gen()) { pb.update(written) }
 ```
 
 `iterator`
-it's a class static method, quickly show a smart progress bar, params: (obj, options), returns a generator. obj is a number or an iteratable object.
 它是一个类静态方法，能够快速产生一个智能的进度条，接收两个参数，参数一既可以是可迭代对象，也可以是数字，当为数字时将作为total选项参数，参数二为选项参数。
 ```js
 const radbar = require('radbar');

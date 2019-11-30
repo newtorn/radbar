@@ -1,4 +1,4 @@
-<p align="right">中文 | <a href="../readme.md">En</a>
+<p align="right">中文 | <a href="../README.md">En</a>
 <div align="center">
 <h1>radbar</h1>
 
